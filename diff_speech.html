@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+
+<meta name="generator" content="Jekyll v3.9.0" />
+
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://github.com/QiangChunyu/UGM_DEMO" />
+<meta property="og:url" content="https://github.com/QiangChunyu/UGM_DEMO" />
+<meta property="og:site_name" content="Diff-LM-Speech" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Minimally-Supervised Speech Synthesis with Conditional Diffusion Model and Language Model: A Comparative Study of Semantic Coding" />
+<script type="application/ld+json">
+{"url":"https://github.com/QiangChunyu/UGM_DEMO","@type":"WebSite","headline":"Minimally-Supervised Speech Synthesis with Conditional Diffusion Model and Language Model: A Comparative Study of Semantic Coding","name":"KConverter","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/KConverter/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
+
+    <!-- <header class="page-header" role="banner">
+      <h1 class="project-name"></h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/QiangChunyu/UGM_DEMO" class="btn">View on GitHub</a>
+      
+      
+    </header> -->
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="-k-converter-an-unsupervised-singing-voice-conversion-system"><center> Minimally-Supervised Speech Synthesis with Conditional Diffusion Model and Language Model: A Comparative Study of Semantic Coding</center></h1>
+<center>Chunyu Qiang, Hao Li, Hao Ni, He Qu, Ruibo Fu, Tao Wang, Longbiao Wang, Jianwu Dang</center>
+<p><br /></p>
+<center>College of Intelligence and Computing, Tianjin University, Tianjin, China</center>
+<center>Kuaishou Technology Co., Ltd, Beijing, China</center>
+<center>Institute of Automation, Chinese Academy of Sciences, Beijing, China </center>
+<p><br /></p>
+
+<!-- <h2 id="abstract">Abstract</h2>
+<div style="text-align: justify"> Recently, there has been a growing interest in text-to-speech (TTS) methods that can be trained with minimal supervision by combining two types of discrete speech representations and using two sequence-to-sequence tasks to decouple TTS. To address the challenges associated with high dimensionality and waveform distortion in discrete representations, we propose Diff-LM-Speech, which models semantic embeddings into mel-spectrogram based on diffusion models and introduces a prompt encoder structure based on variational autoencoders and prosody bottlenecks to improve prompt representation capabilities. Autoregressive language models often suffer from missing and repeated words, while non-autoregressive frameworks face expression averaging problems due to duration prediction models. To address these issues, we propose Tetra-Diff-Speech, which designs a duration diffusion model to achieve diverse prosodic expressions. While we expect the information content of semantic coding to be between that of text and acoustic coding, existing models extract semantic coding with a lot of redundant information and dimensionality explosion. To verify that semantic coding is not necessary, we propose Tri-Diff-Speech. Experimental results show that our proposed methods outperform baseline methods. </div> -->
+
+<p><br /></p>
+
+<h2 id="model-architecture">Model Architecture</h2>
+<table border="0" align="center">
+  <tbody>
+    <tr>
+      <td><img src="./model.png" width="1500" alt="Overall Architecture" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h2 id="comparison-with-baseline-systems">High Quality Data (1 hour)</h2>
+
+<table align="center">
+  <thead>
+    <tr>
+      <th>Prompt</th>
+      <th>Synthesized Speech</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"钟上的时针指明这正是夜晚和睡觉的时候。"</i></span></td>
+   <tr>
+      <td><audio controls="" preload="auto"><source src="wav/high_prompt.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/high_quality_1h/019541.wav" /></audio></td>
+    </tr>
+
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"从地窖浮到地面的种子发了芽，长得又高又壮。"</i></span></td>
+      <tr>
+         <td><audio controls="" preload="auto"><source src="wav/high_prompt.wav" /></audio></td>
+         <td><audio controls="" preload="auto"><source src="wav/high_quality_1h/019830.wav" /></audio></td>
+       </tr>
+
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"打破男性甚至是女性对于女性美的刻板印象。"</i></span></td>
+    <tr>
+        <td><audio controls="" preload="auto"><source src="wav/high_prompt.wav" /></audio></td>
+        <td><audio controls="" preload="auto"><source src="wav/high_quality_1h/019936.wav" /></audio></td>
+      </tr>
+
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"瑞星公司为应对本次病毒成立应急处理小组"</i></span></td>
+      <tr>
+          <td><audio controls="" preload="auto"><source src="wav/high_prompt.wav" /></audio></td>
+          <td><audio controls="" preload="auto"><source src="wav/high_quality_1h/020621.wav" /></audio></td>
+        </tr>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"发现美国总统对犹太人的遭遇毫无兴趣"</i></span></td>
+      <tr>
+          <td><audio controls="" preload="auto"><source src="wav/high_prompt.wav" /></audio></td>
+          <td><audio controls="" preload="auto"><source src="wav/high_quality_1h/022429.wav" /></audio></td>
+        </tr>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"其次就是不单单街电完成了巨额融资。"</i></span></td>
+      <tr>
+          <td><audio controls="" preload="auto"><source src="wav/high_prompt.wav" /></audio></td>
+          <td><audio controls="" preload="auto"><source src="wav/high_quality_1h/029181.wav" /></audio></td>
+        </tr>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"要是如此每年的进士一箩筐一箩筐的出"</i></span></td>
+      <tr>
+          <td><audio controls="" preload="auto"><source src="wav/high_prompt.wav" /></audio></td>
+          <td><audio controls="" preload="auto"><source src="wav/high_quality_1h/302902.wav" /></audio></td>
+        </tr>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"就要付出近三亿英镑约二十六亿人民币"</i></span></td>
+      <tr>
+          <td><audio controls="" preload="auto"><source src="wav/high_prompt.wav" /></audio></td>
+          <td><audio controls="" preload="auto"><source src="wav/high_quality_1h/305436.wav" /></audio></td>
+        </tr>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"好在迷彩元素尽自己本能在收紧腰身"</i></span></td>
+      <tr>
+          <td><audio controls="" preload="auto"><source src="wav/high_prompt.wav" /></audio></td>
+          <td><audio controls="" preload="auto"><source src="wav/high_quality_1h/306333.wav" /></audio></td>
+        </tr>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"谁都比不过曾经叱咤内地歌坛的孙悦"</i></span></td>
+      <tr>
+          <td><audio controls="" preload="auto"><source src="wav/high_prompt.wav" /></audio></td>
+          <td><audio controls="" preload="auto"><source src="wav/high_quality_1h/307336.wav" /></audio></td>
+        </tr>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"我不要我一边捂着肚子一边叫我不要去山婆婆那儿"</i></span></td>
+      <tr>
+          <td><audio controls="" preload="auto"><source src="wav/high_prompt.wav" /></audio></td>
+          <td><audio controls="" preload="auto"><source src="wav/high_quality_1h/309614.wav" /></audio></td>
+        </tr>
+  </tbody>
+</table>
+<hr />
+
+
+<h2 id="comparison-with-baseline-systems">Low Quality Data</h2>
+<table align="center">
+  <thead>
+    <tr>
+      <th>Prompt</th>
+      <th>Synthesized Speech (30 minutes)</th>
+      <th>Synthesized Speech (15 minutes)</th>
+      <th>Synthesized Speech (5 minutes)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"所以酒量是天生的，身体是自己的，喝到位就得了。"</i></span></td>
+   <tr>
+      <td><audio controls="" preload="auto"><source src="wav/low_prompt.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_30min/100073.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_15min/100073.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_5min/100073.wav" /></audio></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"用户可以通过快手APP来创作自己的短视频内容。"</i></span></td>
+   <tr>
+      <td><audio controls="" preload="auto"><source src="wav/low_prompt.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_30min/100140.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_15min/100140.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_5min/100140.wav" /></audio></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"快手数字人可以帮助用户实现从现实到虚拟、从自然到人工的转化。"</i></span></td>
+   <tr>
+      <td><audio controls="" preload="auto"><source src="wav/low_prompt.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_30min/100181.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_15min/100181.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_5min/100181.wav" /></audio></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"这条全长一千九百六十公里的高速路串起了长江经济带的六个城市、三大城市群。"</i></span></td>
+   <tr>
+      <td><audio controls="" preload="auto"><source src="wav/low_prompt.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_30min/100244.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_15min/100244.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_5min/100244.wav" /></audio></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"所以处女座就会操心，替自己操心，替身边的人操心。"</i></span></td>
+   <tr>
+      <td><audio controls="" preload="auto"><source src="wav/low_prompt.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_30min/100366.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_15min/100366.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_5min/100366.wav" /></audio></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"煮出来的茶汤就不会有苦涩感。"</i></span></td>
+   <tr>
+      <td><audio controls="" preload="auto"><source src="wav/low_prompt.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_30min/100383.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_15min/100383.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_5min/100383.wav" /></audio></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"但是这个药确实对口腔溃疡的治疗非常不错，那到底怎么用呢？"</i></span></td>
+   <tr>
+      <td><audio controls="" preload="auto"><source src="wav/low_prompt.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_30min/100397.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_15min/100397.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_5min/100397.wav" /></audio></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"您好，欢迎致电，请问有什么可以帮到您？"</i></span></td>
+   <tr>
+      <td><audio controls="" preload="auto"><source src="wav/low_prompt.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_30min/100411.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_15min/100411.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_5min/100411.wav" /></audio></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr class="info"><td colspan="4"><span>Target text 1 <i>"这一款很适合您的气质，您可以试戴一下。"</i></span></td>
+   <tr>
+      <td><audio controls="" preload="auto"><source src="wav/low_prompt.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_30min/100451.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_15min/100451.wav" /></audio></td>
+      <td><audio controls="" preload="auto"><source src="wav/low_quality_5min/100451.wav" /></audio></td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+
+
+<hr />
+
+
+
+
+      <footer class="site-footer">
+        
+      
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
